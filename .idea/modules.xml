@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/actionate-web.iml" filepath="$PROJECT_DIR$/.idea/actionate-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../actionate/.idea/actionate.iml" filepath="$PROJECT_DIR$/../actionate/.idea/actionate.iml" />
     </modules>
   </component>
 </project>
