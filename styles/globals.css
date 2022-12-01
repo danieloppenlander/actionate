@@ -8,15 +8,73 @@ body {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  font-size: 1.5em;
   font-weight: 500;
   margin: 0 0 20px 0;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 500;
   margin: 0 0 20px 0;
+}
+
+input[type=text] {
+  border: 1px solid;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 20px 0;
+  display: block;
+  width: 20em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+textarea {
+  border: 1px solid;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 20px 0;
+  display: block;
+  width: 20em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+input[type=submit] {
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 15px;
+  overflow: hidden;
+  width: 5em;
+  margin: 20px 0;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  border: none;
+}
+
+/* ######################### */
+/* Reusable styles */
+/* ######################### */
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .text-bold {
@@ -32,18 +90,6 @@ p {
   overflow: hidden;
   margin: 20px;
   padding: 20px;
-}
-
-.button {
-  font-size: 1.5em;
-  font-weight: 500;
-  border-radius: 25px;
-  padding: 15px;
-  overflow: hidden;
-  width: 5em;
-  margin: 20px 0;
-  display: block;
-  text-decoration: none;
 }
 
 .chip {
@@ -81,8 +127,12 @@ p {
   color: #fff;
 }
 
-.border {
+.border-solid {
   border: 2px solid;
+}
+
+.border-dashed {
+  border: 2px dashed;
 }
 
 .float-left {

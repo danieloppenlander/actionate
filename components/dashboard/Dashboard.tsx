@@ -1,55 +1,17 @@
 import React from "react";
-import { useState } from "react";
 
 import { Container, Row, Col } from "react-grid-system";
 
-import { User } from "../../interfaces/User";
-import { Goals } from "../../interfaces/Goal";
+import {Goal, User} from '@prisma/client'
 
-import GoalDisplay from "./GoalDisplay";
+import Goals from "./Goals";
 
-function Dashboard() {
-  const [user] = useState<User>({ name: "Daniel" });
-  const [goals] = useState<Goals>({
-    goals: [
-      {
-        name: "Exercise",
-        description: "This is a description. It is longer than the title.",
-        isCompleted: true,
-        isDaily: true,
-      },
-      {
-        name: "Sleep 8 hours",
-        description: "This is a description. It is longer than the title.",
-        isCompleted: true,
-        isDaily: true,
-      },
-      {
-        name: "test1",
-        description: "This is a description. It is longer than the title.",
-        isCompleted: false,
-        isDaily: true,
-      },
-      {
-        name: "test1",
-        description: "This is a description. It is longer than the title.",
-        isCompleted: true,
-        isDaily: false,
-      },
-      {
-        name: "test1",
-        description: "This is a description. It is longer than the title.",
-        isCompleted: false,
-        isDaily: false,
-      },
-      {
-        name: "test1",
-        description: "This is a description. It is longer than the title.",
-        isCompleted: false,
-        isDaily: false,
-      },
-    ],
-  });
+interface DashboardProps {
+  user: User;
+  goals: Goal[];
+}
+
+function Dashboard({ user, goals }: DashboardProps) {
 
   return (
     <Container>
@@ -58,12 +20,12 @@ function Dashboard() {
           <h1>
             <span className={"text-orange"}>Actionate</span> / Dashboard
           </h1>
-          <p>Logged in as {user.name}</p>
+          <p>Logged in as {user.email}</p>
         </Col>
       </Row>
       <Row>
         <Col md={6}>
-          <GoalDisplay goals={goals.goals} />
+          <Goals goals={goals} user={user} />
         </Col>
       </Row>
     </Container>

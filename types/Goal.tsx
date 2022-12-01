@@ -1,10 +1,12 @@
-export interface Goal {
+
+
+export type Goal = {
   name: string;
   description: string;
   isCompleted: boolean;
   isDaily: boolean;
 }
 
-export interface Goals {
+export type Goals = {
   goals: Goal[];
 }
