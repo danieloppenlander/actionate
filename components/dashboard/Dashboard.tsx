@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Row, Col } from "react-grid-system";
 
-import {Goal, User} from '@prisma/client'
+import { Goal, User } from "@prisma/client";
 
 import Goals from "./Goals";
 
@@ -12,7 +12,6 @@ interface DashboardProps {
 }
 
 function Dashboard({ user, goals }: DashboardProps) {
-
   return (
     <Container>
       <Row>

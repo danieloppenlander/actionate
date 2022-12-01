@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import {Goal, User} from '@prisma/client'
+import { Goal, User } from "@prisma/client";
 
 interface GoalDisplayProps {
   goals: Goal[];
@@ -10,7 +10,7 @@ interface GoalDisplayProps {
 function Goals({ goals }: GoalDisplayProps) {
   const [title, setTitle] = useState<string>("");
   const [isDaily, setIsDaily] = useState<boolean>(false);
-  const [description, setDescription] = useState<string>("")
+  const [description, setDescription] = useState<string>("");
 
   return (
     <div>
@@ -41,34 +41,36 @@ function Goals({ goals }: GoalDisplayProps) {
       <div className={"card border-dashed"}>
         <form onSubmit={createGoal}>
           <input
-              type={"text"}
-              className={"text-input"}
-              placeholder={"What do you want to accomplish?"}
-              value={title}
-              onChange={e => setTitle(e.target.value)}
+            type={"text"}
+            className={"text-input"}
+            placeholder={"What do you want to accomplish?"}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
           <input
-              type={"checkbox"}
-              name={"isDaily"}
-              checked={isDaily}
-              onChange={e => setIsDaily(e.target.checked)}
+            type={"checkbox"}
+            name={"isDaily"}
+            checked={isDaily}
+            onChange={(e) => setIsDaily(e.target.checked)}
           />
           Daily Goal
           <textarea
-              className={"text-input"}
-              placeholder={"Clearly define the criteria."}
-              value={description}
-              onChange={e => setDescription(e.target.value)}
+            className={"text-input"}
+            placeholder={"Clearly define the criteria."}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
-          <input type={"submit"} value={"Go"} className={"button gradient-blue"} />
+          <input
+            type={"submit"}
+            value={"Go"}
+            className={"button gradient-blue"}
+          />
         </form>
       </div>
     </div>
   );
 
-  async function createGoal() {
-
-  }
+  async function createGoal() {}
 }
 
 export default Goals;
