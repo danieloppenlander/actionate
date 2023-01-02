@@ -1,0 +1,22 @@
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right
+}
+
+.align-right {
+    align-content: end;
+}
+
+.inline {
+    display: inline-block;
+    margin: 0 5px;
+}

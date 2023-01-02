@@ -1,0 +1,13 @@
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+}
+
+.chip {
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+    padding: 5px 10px;
+}
