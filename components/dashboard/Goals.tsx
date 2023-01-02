@@ -69,13 +69,13 @@ function Goals() {
 }
 
 export async function getStaticProps() {
-  const goals = await fetch('/api/goals', {
-    method: 'GET',
+  const goals = await fetch("/api/goals", {
+    method: "GET",
   });
 
   return {
-    props: { goals: JSON.parse(JSON.stringify(goals))}
-  }
+    props: { goals: JSON.parse(JSON.stringify(goals)) },
+  };
 }
 
 export default Goals;

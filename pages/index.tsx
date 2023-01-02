@@ -3,9 +3,9 @@ import Header from "../components/header/Header";
 
 export default function Index() {
   return (
-      <div>
-        <Header />
-        <Dashboard/>
-      </div>
+    <div>
+      <Header />
+      <Dashboard />
+    </div>
   );
 }
