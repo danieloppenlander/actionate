@@ -7,7 +7,7 @@ export function SessionChip() {
   if (session) {
     return (
       <span>
-        <p className={"inline"}>{session.user.name}</p>
+        <p className={"inline"}>{session.user && session.user.name}</p>
         <button className={"inline"} onClick={() => signOut()}>
           Logoff
         </button>
