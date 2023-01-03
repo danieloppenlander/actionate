@@ -13,7 +13,7 @@ export default NextAuth({
     maxAge: 30 * 24 * 60 * 60,
 
     // Refresh session every 24 hours
-    updateAge: 24 * 60 * 60
+    updateAge: 24 * 60 * 60,
   },
   providers: [
     GithubProvider({
