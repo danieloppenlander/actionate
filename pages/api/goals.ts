@@ -1,18 +1,20 @@
-import { Goal, PrismaClient } from "@prisma/client";
-import { NextApiRequest, NextApiResponse } from "next";
+import {PrismaClient} from "@prisma/client";
+import {NextApiRequest, NextApiResponse} from "next";
+import {unstable_getServerSession} from "next-auth";
+import {authOptions} from "./auth/[...nextauth]";
 
 const prisma = new PrismaClient();
 
 export default async function handle(
-  req: NextApiRequest,
-  res: NextApiResponse
+    req: NextApiRequest,
+    res: NextApiResponse
 ) {
-  const goals: Goal[] = await prisma.goal.findMany({
+
+  const session = await unstable_getServerSession(req, res, authOptions);
+  const goals = await prisma.goal.findMany({
     where: {
-      user: {
-        email: "daniel@oppenlander.net",
-      },
+      user: {email: session?.user?.email}
     },
   });
-  res.json(goals);
+  res.status(200).json(goals);
 }

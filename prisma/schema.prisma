@@ -18,13 +18,13 @@ model User {
   name           String?
   image          String?
   goals          Goal[]
-  accounts      Account[]
+  accounts       Account[]
   sessions       Session[]
 }
 
 model Goal {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId       String
+  userId       String   @db.ObjectId
   title        String
   description  String?
   isDaily      Boolean  @default(false)
@@ -35,7 +35,7 @@ model Goal {
 
 model Account {
   id                 String  @id @default(auto()) @map("_id") @db.ObjectId
-  userId             String
+  userId             String  @db.ObjectId
   type               String
   provider           String
   providerAccountId  String

@@ -1,27 +1,27 @@
 .text-blue {
-  color: #2962ff;
+    color: #2962ff;
 }
 
 .text-orange {
-  color: #ff6d00;
+    color: #ff6d00;
 }
 
 .gradient-blue {
-  background-image: linear-gradient(to right, #0091ea, #2962ff);
-  color: #fff;
+    background-image: linear-gradient(to right, #0091ea, #2962ff);
+    color: #fff;
 }
 
 .gradient-orange {
-  background-image: linear-gradient(to right, #dd2c00, #ff6d00);
-  color: #fff;
+    background-image: linear-gradient(to right, #dd2c00, #ff6d00);
+    color: #fff;
 }
 
 .gradient-purple {
-  background-image: linear-gradient(to right, #6200ea, #aa00ff);
-  color: #fff;
+    background-image: linear-gradient(to right, #6200ea, #aa00ff);
+    color: #fff;
 }
 
 .gradient-teal {
-  background-image: linear-gradient(to right, #00c853, #00bfa5);
-  color: #fff;
+    background-image: linear-gradient(to right, #00c853, #00bfa5);
+    color: #fff;
 }

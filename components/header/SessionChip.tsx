@@ -1,13 +1,13 @@
-import { signIn, signOut, useSession } from "next-auth/react";
+import {signIn, signOut, useSession} from "next-auth/react";
 import React from "react";
 
-export function SessionChip() {
-  const { data: session } = useSession();
+export default function SessionChip() {
+  const {data: session} = useSession();
 
   if (session) {
     return (
-      <span>
-        <p className={"inline"}>{session.user && session.user.name}</p>
+        <span>
+        <p className={"inline"}>{session?.user?.name}</p>
         <button className={"inline"} onClick={() => signOut()}>
           Logoff
         </button>
@@ -15,7 +15,7 @@ export function SessionChip() {
     );
   } else {
     return (
-      <span>
+        <span>
         <button onClick={() => signIn()}>Login</button>
       </span>
     );

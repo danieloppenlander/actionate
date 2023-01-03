@@ -1,21 +1,17 @@
 import React from "react";
 
-import { Container, Row, Col } from "react-grid-system";
-
-import { Goal, User } from "@prisma/client";
+import {Col, Container, Row} from "react-grid-system";
 
 import Goals from "./Goals";
 
-function Dashboard() {
+export default function Dashboard() {
   return (
-    <Container>
-      <Row>
-        <Col md={6}>
-          <Goals />
-        </Col>
-      </Row>
-    </Container>
+      <Container>
+        <Row>
+          <Col md={6}>
+            <Goals/>
+          </Col>
+        </Row>
+      </Container>
   );
 }
-
-export default Dashboard;
